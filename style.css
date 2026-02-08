@@ -1,0 +1,70 @@
+:root {
+    --main-blue: #1a5276;
+    --accent-red: #c0392b;
+    --light-gray: #f8f9fa;
+}
+
+html {
+    scroll-behavior: smooth; /* التمرير السلس */
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--main-blue);
+}
+
+/* Hero Section */
+.hero-section {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+}
+
+/* Service Cards & Hover */
+.service-card {
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: var(--main-blue);
+    margin-bottom: 15px;
+}
+
+/* Filter Buttons */
+.filter-btn {
+    border: 2px solid var(--main-blue);
+    color: var(--main-blue);
+    margin: 5px;
+    border-radius: 20px;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: var(--main-blue);
+    color: white;
+}
+
+/* Section Title */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-red);
+    margin: 10px auto;
+}
